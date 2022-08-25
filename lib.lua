@@ -1888,6 +1888,18 @@ function Library:Label(options)
 			TextXAlignment = Enum.TextXAlignment.Left
 		})
     end
+
+    local methods = {}
+
+    function methods:SetText(txt)
+        text.Text = txt
+	end
+    function methods:SetHeader(txt)
+        description.Text = txt
+	end
+
+    return methods
+    
 end
 function Library:color_picker(options)
 	options = self:set_defaults({
