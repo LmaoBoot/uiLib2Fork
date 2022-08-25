@@ -1861,8 +1861,8 @@ end
 
 function Library:Label(options)
     options = self:set_defaults({
-		Header = "Header",
-		Body = "Text Body",
+		Name = "Header",
+		Description = "Text Body",
 	}, options)
     local buttonContainer = self.container:object("TextButton", {
 		Theme = {BackgroundColor3 = "Secondary"},
@@ -1870,19 +1870,19 @@ function Library:Label(options)
 	}):round(7)
     local text = buttonContainer:object("TextLabel", {
 		BackgroundTransparency = 1,
-		Position = UDim2.fromOffset(10, (options.Body and 5) or 0),
-		Size = (options.Body and UDim2.new(0.5, -10, 0, 22)) or UDim2.new(0.5, -10, 1, 0),
-		Text = options.Header,
+		Position = UDim2.fromOffset(10, (options.Description and 5) or 0),
+		Size = (options.Description and UDim2.new(0.5, -10, 0, 22)) or UDim2.new(0.5, -10, 1, 0),
+		Text = options.Name,
 		TextSize = 22,
 		Theme = {TextColor3 = "StrongText"},
 		TextXAlignment = Enum.TextXAlignment.Left
 	})
-    if options.Body then
+    if options.Description then
 		local description = buttonContainer:object("TextLabel", {
 			BackgroundTransparency = 1,
 			Position = UDim2.fromOffset(10, 27),
 			Size = UDim2.new(0.5, -10, 0, 20),
-			Text = options.Body,
+			Text = options.Description,
 			TextSize = 18,
 			Theme = {TextColor3 = "WeakText"},
 			TextXAlignment = Enum.TextXAlignment.Left
