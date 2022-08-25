@@ -1880,7 +1880,7 @@ function Library:Label(options)
     if options.Description then
 		local description = buttonContainer:object("TextLabel", {
 			BackgroundTransparency = 1,
-			Position = UDim2.fromOffset(10, 27),
+			Position = UDim2.fromOffset(10, 27 + (#string.split(options.Description, "\n") * 5)),
 			Size = UDim2.new(0.5, -10, 0, 20),
 			Text = options.Description,
 			TextSize = 18,
