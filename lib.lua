@@ -1887,6 +1887,7 @@ function Library:Label(options)
 			Theme = {TextColor3 = "WeakText"},
 			TextXAlignment = Enum.TextXAlignment.Left
 		})
+    end
 end
 function Library:color_picker(options)
 	options = self:set_defaults({
